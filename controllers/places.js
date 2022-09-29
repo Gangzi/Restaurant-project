@@ -18,16 +18,32 @@ router.get('/', (req, res) => {
   }]
 
   router.get('/', (req, res) => {
-    res.render('places/index', { places })
-})
+    res.render('places/index', { places})
+  })
+  //SHOW
+  router.get('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+      res.render('error404')
+    }
+    else if (!places[id]) {
+      res.render('error404')
+    }
+    else {
+      res.render('places/show',{ place: places[id] })
+    }
+  })
+  
+
+
 
   //GET/PLACES/NEW
   router.get('/new', (req, res) => {
     res.render('places/new')
   })
-  
+
   router.post('/', (req, res) => {
- 
+
     if (!req.body.pic) {
       // Default image if one is not provided
       req.body.pic = 'images/dog-with-sunglasses.jpg'
@@ -41,8 +57,8 @@ router.get('/', (req, res) => {
     places.push(req.body)
     res.redirect('/places')
   })
-  
-  
+
+
 
 })
 
