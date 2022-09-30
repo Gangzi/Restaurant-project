@@ -20,8 +20,6 @@ function index (data){
       </div>
     )
   })
-  
-
   return (
     <Def>
       <main>
@@ -32,5 +30,6 @@ function index (data){
       </main>
     </Def>
   )
+  
 }
 module.exports = index
