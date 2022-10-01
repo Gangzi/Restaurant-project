@@ -10,11 +10,17 @@ function show(data) {
           Edit
         </a>
 
+        <div>
+          <h2>Rating</h2>
+          <h3>Not Rated</h3>
+        </div>
+
         <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
           <button type="submit" className="btn btn-danger">
             Delete
           </button>
         </form>
+
 
 
       </main>
