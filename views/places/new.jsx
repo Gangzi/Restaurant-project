@@ -20,7 +20,7 @@ function new_form(data) {
                         <label for="founded">Founded Year</label>
                         <input type="number" className="form-control" id="founded" name="founded" value={new Date() .getFullYear()}/>
                     </div>
-
+                    <input className="btn btn-primary" type="submit" value="Add Place" />
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
                         <input className="form-control" id="name" name="name" required />
@@ -42,7 +42,7 @@ function new_form(data) {
                         <input className="form-control" id="cuisines" name="cuisines" required />
                     </div>
 
-                    <input className="btn btn-primary" type="submit" value="Add Place" />
+                   
                 </form>
 
 
